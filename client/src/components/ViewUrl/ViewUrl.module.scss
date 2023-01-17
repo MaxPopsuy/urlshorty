@@ -1,0 +1,25 @@
+.container {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  .container__table {
+    border-radius: 8px;
+    width: 100%;
+
+
+  }
+}
+.table__dark {
+  background-color: #453C67;
+  border-radius: 8px;
+}
+th {
+  color: #fff;
+}
+
+td {
+  border: 1px solid #453C67;
+  background-color: rgb(29, 23, 29);
+  a {
+    color: #e064ff;
+  }
+}

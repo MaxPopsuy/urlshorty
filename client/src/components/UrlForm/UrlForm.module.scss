@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  width: 600px;
+
+  &__text {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 20px;
+  }
+
+  &__link {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #e064ff;
+    transition: 0.5s ease;
+
+    &:hover {
+      color: #773787;
+    }
+  }
+
+  &__title {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+  }
+
+  &__form {
+    width: 70%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__input {
+    width: 80%;
+    height: 50px;
+    border: 0;
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      // transition: all 0.5s ease;
+      background-color: #2b3a55;
+    }
+    // &:hover::placeholder {
+    //   // transition: all 0.5s ease;
+    //   // color: #fff;
+    //   // background-color: #6F1AB6;
+    // }
+    &:focus,
+    &:focus-visible {
+      outline: 4px auto -webkit-focus-ring-color;
+    }
+  }
+
+  &__button {
+    font-family: "Rubik", sans-serif;
+
+    width: 12rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  &__button:hover {
+    border-color: #e064ff;
+  }
+  &__button:focus,
+  &__button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}

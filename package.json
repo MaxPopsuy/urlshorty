@@ -1,0 +1,27 @@
+{
+  "name": "urlshorty",
+  "version": "1.0.0",
+  "description": "simple url shortener project",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm run install:server && npm run install:client",
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "start:server": "cd server && npm run start:dev",
+    "start:client": "cd client && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxPopsuy/urlshorty.git"
+  },
+  "author": "MaxPopsui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxPopsuy/urlshorty/issues"
+  },
+  "homepage": "https://github.com/MaxPopsuy/urlshorty#readme",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
