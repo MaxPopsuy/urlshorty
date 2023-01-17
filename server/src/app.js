@@ -3,6 +3,7 @@ const volleyball = require("volleyball");
 const helmet = require("helmet");
 const cors = require("cors");
 require("dotenv").config();
+const path = require("path");
 
 const apiRouter = require("./routes/api");
 const redirect = require("./routes/redirect");
@@ -24,6 +25,14 @@ app.get("/", (req, res) => {
 app.use("/", redirect);
 app.use("/api/v1", apiRouter);
 
+
+
 app.use(errorHandler);
+
+app.use(express.static(path.resolve(__dirname, "../client/build")));
+
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+});
 
 module.exports = app;
