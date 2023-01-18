@@ -11,7 +11,7 @@ exports.findAll = async (req, res, next) => {
 exports.create = async (req, res, next) => {
   try {
     const { origUrl } = req.body;
-    const base = `http://localhost:8080/redirect`;
+    const base = `https://urlshorty-am8i.onrender.com/redirect`;
     console.log("worked");
     if (urlUtil.validateUrl(origUrl)) {
       console.log("worked util");
