@@ -18,21 +18,17 @@ app.use(volleyball);
 app.use(helmet());
 app.use(cors({ origin: "*" }));
 
+
+app.use(express.static(path.resolve(__dirname, "../../client/build")));
+
 app.get("/", (req, res) => {
-  res.json({ message: "Hello, World!" });
+  res.sendFile(path.resolve(__dirname, "../../client/build", "index.html"));
 });
 
 app.use("/", redirect);
 app.use("/api/v1", apiRouter);
 
-
-
 app.use(errorHandler);
 
-app.use(express.static(path.resolve(__dirname, "../../client/build")));
-
-app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "../../client/build", "index.html"));
-});
 
 module.exports = app;
